@@ -37,7 +37,6 @@ public final class JsonUtil {
     } else if (next == ValueType.STRING) {
       return ji.decodeBase64String();
     } else {
-      System.out.println("Unhandled parsed data: " + ji.currentBuffer());
       ji.skip();
       return new byte[0];
     }
